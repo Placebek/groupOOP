@@ -8,7 +8,7 @@ class device:
 
 	def device.battery_life(self, battery_life):
 		self.battery_life = battery_life
-
+return
 	
 	
 
