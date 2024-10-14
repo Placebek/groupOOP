@@ -1,0 +1,5 @@
+ n = 1, нәтиже x болу керек
+    n = 1
+    expected = 5
+    result = x ** n
+    assert result == expected, f"Test Case 2 Failed: {result} != {expected}"
