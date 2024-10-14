@@ -1,0 +1,14 @@
+class clothe():
+    def __init__(self, size, color):
+	self.__size = size
+	self.__color = color
+    def set_private(self, size, color):
+	self.__size = size
+	self.__color = color
+    def get_private(self):
+	return self.__size, self.__color
+
+class 
+
+j = Jacet(120, "blue")
+print(j.get_private())
