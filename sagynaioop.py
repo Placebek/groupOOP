@@ -28,11 +28,10 @@ class Microwave(Appliance):
 	return "Микроволновка разогревает еду"
 
 def operate():
-    washingmachine = WashingMachine()
-    refrigerator = Refrigerator()
-    microwave = Microwave()
+    washingmachine = WashingMachine("LG washing machine", "on")
+    refrigerator = Refrigerator("SAMSUNG refrigerator", "on")
+    microwave = Microwave("LG microwave", "on")
 
 print(operate.washingmachine)
 print(operate.refrigerator)
 print(operate.microwave)
-
