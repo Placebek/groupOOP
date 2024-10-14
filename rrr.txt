@@ -8,7 +8,7 @@ class ZooAnimal:
     def get_weight(self):
 	return self.weight
     def sound(self):
-	return:""
+	return:"jivotnoe izdaet zvuk"
 class Lion(ZooAnimal):
     def __init__(self,weight):
 	super().__init__("lion"weight)
