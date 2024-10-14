@@ -1,1 +1,56 @@
-a
+# 5 nuska
+class Device:
+    def __init__(self, name, battery_life):
+        self.__name = name
+        self.__battery_life = battery_life
+    
+    def get_name(self):
+        return self.__name
+
+    def get_battery_life(self):
+        return self.__battery_life
+ 
+    def set_name(self, name):
+        self.name = name 
+
+    def set_battery_life(self, battery_life):
+        self.battery_life = battery_life
+d = Device("iPhone", 100)
+print(d.get_name())
+d.set_name("Huawei", 97)
+print(d.set_name)
+class Smartphone(Device):
+    def __init__(self, name, battery_life, phone):
+        super().__init__(name, battery_life)
+        self.phone = phone
+ 
+    def call(self):
+        return f"{phone} телефон шырылдады" 
+    
+    def use(self):
+        return f"{a} = {[self.phone]} "
+s  = smartphone("iPhone", 100, "arr")
+
+class Laptop(Smartphone):
+    def __init__(self, name, battery_life, notebook):
+        super().__init__(name, battery_life)
+        self.notebook = notebook
+
+    def compile_code(self):
+        return f"{self.notebook} ноутбук кодты курастырды"
+
+    def use(self):
+        return f"{a} = {[self.phone, self.notebook]} "
+
+class Tablet(Laptop):
+    def __init__(self, name, battery_life, draw):
+        super().__init(name, battery_life)
+        self.draw = draw
+
+    def draw(self):
+        return f"{self.draw} планшет сурет салу үшін колданылады"
+
+    def use(self):
+        return f"{a} = {[self.phone, self.notebook, self.draw]} "
+
+
