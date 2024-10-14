@@ -1,0 +1,24 @@
+class product;
+    def _init__(self,name,price,quantity):
+        self.__name=name
+	self.price=price
+	self.quantity=quantity
+    def get_name(self):
+	return.self_name
+    def get_price(self):
+	return.self_name
+    def get_quantity(self):
+	return.self_quantity
+    def get_product_details(self)
+	return f"product:
+(self.name) Price:(self.price) quantity:(self.quantity)
+class Electronics(product);
+    def__init__(self,name,price,quantity,warranty):
+	super().__init__(name,price,quantity)
+	self.__warranty=warranty
+    def get_products_details(self):
+	details=
+super().get_product_details
+	return f"(details),Warranty:
+self._warranty)months"g
+		
