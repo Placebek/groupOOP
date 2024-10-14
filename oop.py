@@ -1,3 +1,4 @@
+# 4 - нұсқа
 class Appliance:
     def __init__(self, brand, power):
         self.__brand = brand   
