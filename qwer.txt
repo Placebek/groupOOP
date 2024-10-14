@@ -8,7 +8,7 @@ class clothe():
     def get_private(self):
 	return self.__size, self.__color
 
-class 
+class jacet
 
 j = Jacet(120, "blue")
 print(j.get_private())
