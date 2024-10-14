@@ -19,5 +19,4 @@ class Electronics(product);
     def get_products_details(self):
 	details=
 super().get_product_details
-	return f"(details),Warranty:
 		
