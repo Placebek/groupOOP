@@ -1,3 +1,4 @@
+# 2 nuska
 class ZooAnimal:
     def __init__(self,species,weight):
         self.species=species
@@ -8,7 +9,7 @@ class ZooAnimal:
 	return self.weight
     def sound(self):
 	return:""
-Class Lion(ZooAnimal):
+class Lion(ZooAnimal):
     def __init__(self,weight):
 	super().__init__("lion"weight)
  
@@ -16,7 +17,7 @@ Class Lion(ZooAnimal):
 	return "lev rychit"
     def sound(self)
 	return"izdaet zvuk"
-Class Elephant(ZooAnimal):
+class Elephant(ZooAnimal):
     def __init__(self,weight):
 	super().__init__("Elephant" weight)
 
@@ -24,7 +25,7 @@ Class Elephant(ZooAnimal):
 	return"slon trubit"
     def sound(self)
 	return self.trumpet()
-Class penguin(ZooAnimal):
+class penguin(ZooAnimal):
     def__init__(self,weight):
 	super().__init__("penguin" weight)
    
@@ -33,6 +34,6 @@ Class penguin(ZooAnimal):
     def sound(self)
 	return self.swim()
 
-animals=[Lion(250), Elephant(5000), penguin(1000)]
+animals=[Lion(250), Elephant(5000), penguin(15)]
 for animal in animals:
     print (f"{animals.get_species()} vesit {animal.get_weight()} kg i izdaet zvuk:{animal.sound()}")
