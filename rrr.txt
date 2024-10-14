@@ -20,5 +20,4 @@ class Electronics(product);
 	details=
 super().get_product_details
 	return f"(details),Warranty:
-self._warranty)months"g
 		
