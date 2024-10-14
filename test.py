@@ -1,30 +1,59 @@
-# Нұсқа 4
-
-class Course:
-	def __init__(self, title, credits):
-		self._title = title
-		self._credits = credits
-
-	def get_course_info(self, title, credits):
-		pass
+class Appliance:
+	def __init__(self,brand, power):
+		self.__brand = brand
+		self.__power = power
 	
-	def calc_res(self):
-		return self._credits * 3
+	def get_brand(self):
+		return self.__brand
+	def get_power(self):
+		return self.__power
+	def set_brand(self, brand):
+		self.__brand = brand
+	def set_power(self, power):
+		self.__power = power
+
+class WashingMachine(Appliance):
+	def __init__(self,brand, power):
+		self.__brand = brand
+		self.__power = power
+	def wash(self):
+		print("Стиральная машина стирает")
+	def operate(self):
+		print("BRRRR")
 	
+class Refrigerator(Appliance):
+	def __init__(self,brand, power):
+		self.__brand = brand
+		self.__power = power
+	def cool(self):
+		print("Holodilnik ohlozhdaet")
+	#@overriding
+	def operate(self):
+		print("Bzzzz")
+class Microwave(Appliance):
+	def __init__(self,brand, power):
+		self.__brand = brand
+		self.__power = power
+	def heat(self):
+		print("Microvalnovka razogrevaet")
+	#@overriding
+	def operate(self):
+		print("wwwwww")
+		
+ap = Appliance(5,10)
 
-class OnlineCourse(Course):
-	def start_video_lecture(self):
-		print("Vidio start")
+print(ap.get_brand())
+print(ap.get_power())
 
-	def get_course_info(self):
-		print(f"Онлайн курс")
+WM = WashingMachine(1,10)
 
+WM.wash()
+WM.operate()
 
-class OfflineCourse(Course):
-	def schedule_classroom(self):
-		print("Lessons start")
+RG = Refrigerator(1,10)
+RG.cool()
+RG.operate()
 
-	def get_course_info(self,):
-		print(f"Оффлайн курс")
-
-
+MC = Microwave(1,10)
+MC.heat()
+MC.operate()
