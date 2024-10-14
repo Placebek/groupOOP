@@ -1,0 +1,45 @@
+#1
+
+class Vehichle:
+    def __init__(self, speed, color)
+	self.__speed = speed
+	self.__color = color
+
+    set_speed(self):
+	return self.__speed
+
+    set_color(self):
+	return self.__color
+
+    get_speed(self):
+	return self.__speed
+
+
+#2
+
+class Car(Vehichle):
+    def get_drive(self):
+	return f"Машина едет"
+
+class Bike(Vehichle):
+    def get_pedal(self):
+	return f"велосипед крутит педали"
+
+class Boat(Vehichle):
+    def get_sail(self):
+	return f"лодка плывет"
+
+#3
+
+class Car:
+    def get_move(self):
+	print f"{get_move} Машина двигается"
+
+class Bike
+    def get_move(self):
+	print f"{} Волосипед едет"
+
+class Boat
+    def get_move(self):
+	print f"{} Лодка плывет"
+
