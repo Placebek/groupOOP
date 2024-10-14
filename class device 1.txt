@@ -1,0 +1,15 @@
+class device:
+	def __init__(self, name, battery_life):
+		self.name = name
+	 	self.battery_life = battery_life
+
+	def device.name(self, name):
+		self.name = name
+
+	def device.battery_life(self, battery_life):
+		self.battery_life = battery_life
+
+	
+	
+
+	
