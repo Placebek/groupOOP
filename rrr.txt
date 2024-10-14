@@ -1,22 +1,38 @@
-class product;
-    def _init__(self,name,price,quantity):
-        self.__name=name
-	self.price=price
-	self.quantity=quantity
-    def get_name(self):
-	return.self_name
-    def get_price(self):
-	return.self_name
-    def get_quantity(self):
-	return.self_quantity
-    def get_product_details(self)
-	return f"product:
-(self.name) Price:(self.price) quantity:(self.quantity)
-class Electronics(product);
-    def__init__(self,name,price,quantity,warranty):
-	super().__init__(name,price,quantity)
-	self.__warranty=warranty
-    def get_products_details(self):
-	details=
-super().get_product_details
-		
+class ZooAnimal:
+    def __init__(self,species,weight):
+        self.species=species
+	self.weight=weight
+    def get_species(self):
+	return self.species
+    def get_weight(self):
+	return self.weight
+    def sound(self):
+	return:""
+Class Lion(ZooAnimal):
+    def __init__(self,weight):
+	super().__init__("lion"weight)
+ 
+    def roar(self)
+	return "lev rychit"
+    def sound(self)
+	return"izdaet zvuk"
+Class Elephant(ZooAnimal):
+    def __init__(self,weight):
+	super().__init__("Elephant" weight)
+
+    def trumpet(self)
+	return"slon trubit"
+    def sound(self)
+	return self.trumpet()
+Class penguin(ZooAnimal):
+    def__init__(self,weight):
+	super().__init__("penguin" weight)
+   
+    def swim(self)
+	return"penguin plavaet"
+    def sound(self)
+	return self.swim()
+
+animals=[Lion(250), Elephant(5000), penguin(1000)]
+for animal in animals:
+    print (f"{animals.get_species()} vesit {animal.get_weight()} kg i izdaet zvuk:{animal.sound()}")
