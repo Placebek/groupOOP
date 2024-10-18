@@ -1,15 +1,22 @@
-class device:
-	def __init__(self, name, battery_life):
-		self.name = name
-	 	self.battery_life = battery_life
+class Transport:
+    def __init__(self, name, color)
+        self.__name = name
+        self.__color = color
 
-	def device.name(self, name):
-		self.name = name
+    def get_name(self):
+        return self.__name
 
-	def device.battery_life(self, battery_life):
-		self.battery_life = battery_life
-return
-	
-	
+    def set_color(self, red):
+        self.__color = red
 
-	
+class Car(Transport):
+    def sound():
+        print('muzyka')
+class Airplane(Transport):
+    def ticket():
+        print('number')
+class Ship(Transport):
+    def name_sea():
+        print('alakol')
+
+ 
