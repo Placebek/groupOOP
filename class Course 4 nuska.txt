@@ -1,0 +1,10 @@
+class Course:
+    def __init__(self, title, credit)
+        self.__title = title
+        self.__credit = credit
+
+    def get_title(self):
+        return self.__title
+
+    def set_credit(self, 450)
+        self.credit = 450
