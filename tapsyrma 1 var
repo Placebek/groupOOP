@@ -18,7 +18,7 @@ class Boat(Vehicle):
     def move(self):
         return f"Лодка {self.color} плывет со скоростью {self.speed} км/ч."
 
-# Примеры использования
+
 car = Car(100, "красный")
 bike = Bike(20, "синий")
 boat = Boat(30, "зеленый")
