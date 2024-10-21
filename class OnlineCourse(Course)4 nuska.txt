@@ -1,0 +1,7 @@
+class OnlineCourse(Course):
+    def start_video_lecture():
+        print ('video_urok')
+    
+class OfflineCourse(Course):
+    def schedule_classroom():
+        print ('sabaq')
