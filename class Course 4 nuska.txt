@@ -6,17 +6,20 @@ class Course:
     def get_title(self):
         return self.__title
 
-    def set_credit(self, 450)
-        self.credit = 450
+    def set_credit(self, new)
+        self.__credit = new
 
 class OnlineCourse(Course):
     def start_video_lecture():
-        print ('video_urok')
-    
+        print('video_urok')
+    def get_course_info():
+        print('online kurs')
+
+
 class OfflineCourse(Course):
     def schedule_classroom():
-        print ('sabaq')
+        print('sabaq')
+    def get_course_info():
+        print('offline kurs')
 
-class OnlineCourse(Course):
-    def get_course_info(self):
-        print ('zhaksy kurs')  
+
