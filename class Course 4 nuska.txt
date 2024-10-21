@@ -8,3 +8,15 @@ class Course:
 
     def set_credit(self, 450)
         self.credit = 450
+
+class OnlineCourse(Course):
+    def start_video_lecture():
+        print ('video_urok')
+    
+class OfflineCourse(Course):
+    def schedule_classroom():
+        print ('sabaq')
+
+class OnlineCourse(Course):
+    def get_course_info(self):
+        print ('zhaksy kurs')  
