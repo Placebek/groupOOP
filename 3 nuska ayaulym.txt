@@ -1,0 +1,27 @@
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.__make = make
+        self.__model = model
+        self.__year = year
+ 
+    def get_make(self):
+        return self.__make
+
+    def set_year(self, 2024):
+        self.__year = 2024
+
+class Car(Vehicle):
+    def play_music(self):
+        print("sheker")
+
+    def get_info(self):
+        print("music_sound")
+
+class Truck(Vehicle):
+    def load_cargo(self):
+        print("tez cargo")
+
+    def get_info(self):
+        print("cargo")
+
+    
