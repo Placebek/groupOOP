@@ -19,6 +19,7 @@ d = Device("iPhone", 100)
 print(d.get_name())
 d.set_name("Huawei", 97)
 print(d.set_name)
+
 class Smartphone(Device):
     def __init__(self, name, battery_life, phone):
         super().__init__(name, battery_life)
