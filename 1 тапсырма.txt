@@ -1,0 +1,15 @@
+class Library:
+    def listBooks(self):
+	spisok = {'Abay': 'kitap', 'Muhtar': 'Abay zholy'}
+	return spisok
+
+class Book:
+    def __init__(self, element):
+        self.linkToObject = element
+    
+    def getter(self):
+	print(self.linkToObject.listBooks())
+
+gg = Library()
+secondObject = Book(gg)
+
