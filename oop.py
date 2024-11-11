@@ -1,22 +1,28 @@
-# 4 - нұсқа
-class Appliance:
-    def __init__(self, brand, power):
-        self.__brand = brand   
-        self.__power = power   
-    
-    def get_brand(self):
-        return self.__brand
-    
-    def set_brand(self, brand):
-        self.__brand = brand
-    
-    def get_power(self):
-        return self.__power
-    
-    def set_power(self, power):
-        self.__power = power
+#  4-нұсқа
+class Employee:
+    def _init_(self, name, position): 
+        self.info = f"{name}, {position}"
 
-A = Appliance("Louis Vuitton", "bag")
+class Company:
+    def _init_(self): 
+        self.employees = []
 
-print(A.get_brand())  
-print(A.get_power())  
+    def hire(self, employee): 
+        self.employees.append(employee)
+
+    def fire(self, employee): 
+        self.employees.remove(employee)
+
+    def show_employees(self): 
+        for emp in self.employees: print(emp.info)
+
+
+
+company = Company()
+emp1, emp2 = Employee("John", "Dev"), Employee("Jane", "HR")
+company.hire(emp1)
+company.hire(emp2)
+company.show_employees()
+
+company.fire(emp1)
+company.show_employees()

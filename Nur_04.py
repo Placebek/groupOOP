@@ -1,3 +1,4 @@
+#  4-нұсқа
 class Employee:
     def _init_(self, name, position): 
         self.info = f"{name}, {position}"
@@ -16,7 +17,7 @@ class Company:
         for emp in self.employees: print(emp.info)
 
 
-# Мысал
+
 company = Company()
 emp1, emp2 = Employee("John", "Dev"), Employee("Jane", "HR")
 company.hire(emp1)
