@@ -1,0 +1,25 @@
+#5 nuska
+
+class Engine:
+	def Deatil(self):
+		print("engine")
+
+class Wheel:
+	def Deatil(self):
+		print("Road")
+		
+class Seat:
+	def Deatil(self):
+		print("Kozha")
+
+class Car:
+	def __init__(self, seat, wheel, engine)
+		self.seat = Seat()
+		self.wheel = Wheel()
+		self.engine = Engine()
+	
+	def printer_all(self):
+		self.seat.deatil()
+		self.wheel.deatil()
+		self.engine.deatil()
+

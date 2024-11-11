@@ -1,0 +1,43 @@
+from abc import ABC, abstractmethod
+
+class Transport(ABC):
+    @abstractmethod
+    def deliver(self):
+        pass
+
+class Truck(Transport):
+    def deliver(self):
+        print("Delivering by land in a truck.")
+
+class Ship(Transport):
+    def deliver(self):
+        print("Delivering by land in a ship")
+
+class Logistick(ABC):
+    @abstractmethod  
+    def create_transport(self):
+        pass
+
+    def create_deliver(self):
+        a = self.create_transport()
+        a.deliver()
+
+class RoadLogistick(Logistick):
+    def create_transport(self):
+        return Truck()
+
+class SeaLogistick(Logistick):
+    def create_transport(self):
+        return Ship()
+
+def client_code(logistick: Logistick):
+    logistick.create_deliver()
+
+print("Road:")
+road_logistick = RoadLogistick()
+client_code(road_logistick)
+# print(road_logistick.create_transport())
+print("Ship:")
+ship_logistick = SeaLogistick()
+client_code(ship_logistick)
+# print(ship_logistick.create_transport())
