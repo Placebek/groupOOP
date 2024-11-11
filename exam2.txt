@@ -1,0 +1,23 @@
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.teachers = [] 
+
+class Teacher:
+    def __init__(self, name):
+        self.name = name
+        self.students = []
+
+class School:
+    def __init__(self, name):
+        self.name = name
+        self.students = []
+        self.teachers = []
+
+    def add_teacher(self, teacher):
+   
+
+
+#2
+
+from abc import ABC, abstractmethod

@@ -1,7 +1,7 @@
 #1
 
 class Vehichle:
-    def __init__(self, speed, color)
+    def __init__(self, speed, color):
 	self.__speed = speed
 	self.__color = color
 
