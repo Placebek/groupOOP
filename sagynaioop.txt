@@ -1,38 +1,34 @@
-class Appliance:
-    def__init__(self, brand, power)
-    self.__brand = brand
-    self.__power = power
+from abc import ABC
+
+class person:
+    def__init__(self):
     
-    def get_brand(self):
-        return self.__brand
+    def zdorov(self):
+        return ("Денсаулығы жүз пайыз")
 
-    def set_brand(self):
-        self.__brand = brand
+class brain:
+    def__init__(self):
+        self.person = []
 
-    def get_power(self):
-        return self.__power
+    def work_brain (self, person: Person):
+        return ("Басы истеп тур")
 
-    def set_power(self):
-        self.__power = power
+    def dont_work_brain (self, person: Person):
+        return ("Басы истеп турган жок")
 
-class WashingMachine(Appliance):
-    def wash(self):
-	return "Стиральная машина стирает"
+class heart:
+    def__init__(self):
+        self.person = []
 
-class Refrigerator(Appliance):
-    def cool(self):
-	return "Холодильник охлаждает"
+    def work_heart (self, person: Person):
+        return ("Журеги истеп тур")
 
-class Microwave(Appliance):
-    def heat(self)
-	return "Микроволновка разогревает еду"
+    def dont_work_heart (self, person: Person):
+        return ("Журеги истеми тур")
 
-def operate():
-    washingmachine = WashingMachine()
-    refrigerator = Refrigerator()
-    microwave = Microwave()
+person.zdorov()
+brain.dont_work_brain()
+heart.dont_work_heart()
 
-print(operate.washingmachine)
-print(operate.refrigerator)
-print(operate.microwave)
+
 
