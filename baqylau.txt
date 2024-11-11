@@ -1,0 +1,40 @@
+# 1 tapsyrma
+class School:
+    def __init__(self, teacher_name, oqushy_name):
+        self.teacher_name = teacher_name
+        self.oqushy_name = oqushy_name 
+
+class Teacher(School):
+    def __init__(self, teacher_name, oqushy_name, synyp):
+        super().__init__(teacher_name, oqushy_name)
+        self.synyp = synyp
+        self.students = [] 
+
+    def basqary(self):
+        return f"Mugalim osy {self.synyp} -ty basqarady"
+
+    def add_student(self, student):
+        self.students.append(student) 
+        student.teacher = self 
+
+class Student(School):
+    def __init__(self, teacher_name, oqushy_name, bagyt):
+        super().__init__(teacher_name, oqushy_name)
+        self.bagyt = bagyt
+        self.teacher = None 
+
+    def tagayndau(self):
+        return f"Oqushy osy {self.bagyt} -qa tagaiyndaldy"
+
+teacher1 = Teacher("Aruzhan", "Unknown", "10th Grade")
+student1 = Student("Aruzhan", "Alikhan", "Science")
+student2 = Student("Aruzhan", "Sara", "Math")
+
+
+
+
+
+# 2 tapsyrma
+
+
+      
