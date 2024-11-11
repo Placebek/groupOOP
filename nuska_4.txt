@@ -1,0 +1,24 @@
+class School():
+    def__init__(self, teacher, student):
+        self.__teacher = teacher
+        self._student = student
+
+class Teacher():
+    def get_teacher (self, school, student):
+        self._teacher = school
+
+class Student()
+    def get_student (self, school, teacher):
+        self._student = teacher
+        self._student = school
+
+class School(Teacher):
+@abctrackmetod
+    def student(self):
+pass
+ 
+
+
+
+
+    
