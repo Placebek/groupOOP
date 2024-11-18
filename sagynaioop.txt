@@ -1,34 +1,54 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
-class person:
-    def__init__(self):
-    
-    def zdorov(self):
-        return ("Денсаулығы жүз пайыз")
+class CityFactory(ABC):
+    @abstractmethod
+    def create_city(self):
+        pass
 
-class brain:
-    def__init__(self):
-        self.person = []
+class RoadFactory(CityFactory):
+    def create_city(self):
+        return Road()
 
-    def work_brain (self, person: Person):
-        return ("Басы истеп тур")
+class BuildingFactory(CityFactory):
+    def create_city(self):
+        return Building()
 
-    def dont_work_brain (self, person: Person):
-        return ("Басы истеп турган жок")
+class ParkFactory(CityFactory):
+    def create_city(self):
+        return Park()
 
-class heart:
-    def__init__(self):
-        self.person = []
+class Road:
+    def rabotaet(self):
+        print("Дорога открыты")
 
-    def work_heart (self, person: Person):
-        return ("Журеги истеп тур")
+class Building:
+    def rabotaet(self):
+        print("Зданий построены")
 
-    def dont_work_heart (self, person: Person):
-        return ("Журеги истеми тур")
+class Park:
+    def rabotaet(self):
+        print("Парки работают")
 
-person.zdorov()
-brain.dont_work_brain()
-heart.dont_work_heart()
+class City:
+    def __init__(self):
+        self.road = Road()
+        self.building = Building()
+        self.park = Park()
 
+    def est(self):
+        self.road.otkryty()
+        self.building.salyndy()
+        self.park.rabotaet()
 
+        print("Город существует")
 
+def city_rabotaet(factory: CityFactory):
+    obj = factory.create_city()
+    print("{city.est()}")
+
+road_factory = RoadFactory()
+building_factory = BuildingFactory()
+park_factory = ParkFactory()
+city_rabotaet(road_factory)
+city_rabotaet(building_factory)
+city_rabotaet(park_factory)
