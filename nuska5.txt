@@ -1,0 +1,25 @@
+class Processor():
+    def compassion(self):
+        print("processor working")
+
+class RAM():
+    def __init__(self):
+        self.__RAM = RAM
+
+    def run(self):
+        self.RAM.start()
+        print("RAM run")
+
+RAM = RAM()
+RAM.start()
+        
+
+class HardDrive():
+    def compassion(self):
+        self.__HardDrive = HardDrive
+
+class GraphicsCard():
+    def compassion(self):
+        self.__GraphicsCard = GraphicsCard
+
+
