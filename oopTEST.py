@@ -1,42 +1,59 @@
-# 5 - нұсқа
-from abc import ABC, abstractmethod
+# 4 - нұсқа
+class Fruit:
+    def __init__(self, name, taste):
+        self.__name = name  
+        self.__taste = taste  
+        
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self, name):
+        self.__name = name
+        
+    def get_taste(self):
+        return self.__taste
+    
+    def set_taste(self, taste):
+        self.__taste = taste
+    
+    def describe(self):
+        return "Это настоящий фрукт"
 
+class Apple(Fruit):
+    def __init__(self):
+        super().__init__("Apple", "Crunchy")
+    
+    def crunch(self):
+        return "Яблоко начинает хрустеть!"
+    
+    def describe(self):
+        return "Это яблоко"
 
-class CarComponent(ABC):
-    @abstractmethod
-    def check_status(self):
-        pass
+class Orange(Fruit):
+    def __init__(self):
+        super().__init__("Orange", "Citrusy")
+    
+    def peel(self):
+        return "Апельсин очищается от кожуры"
+    
+    def describe(self):
+        return "Это апельсин"
 
+class Banana(Fruit):
+    def __init__(self):
+        super().__init__("Banana", "Soft")
+    
+    def peel(self):
+        return "Банан очищается от кожуры"
+    
+    def describe(self):
+        return "Это банан"
 
-class Engine(CarComponent):
-    def check_status(self): return "Engine is working."
+fruits = [Apple(), Orange(), Banana()]
 
-class Wheel(CarComponent):
-    def check_status(self): return "Wheel is in good condition."
-
-class Seat(CarComponent):
-    def check_status(self): return "Seat is clean."
-
-
-class Car:
-    def _init_(self):
-        self.components = []
-
-    def add_component(self, component):
-        self.components.append(component)
-
-    def check_all_components(self):
-        for component in self.components:
-            print(component.check_status())
-
-
-def create_component(component_type):
-    components = {"engine": Engine, "wheel": Wheel, "seat": Seat}
-    return components.get(component_type)()
-
-
-car = Car()
-for comp_type in ["engine", "wheel", "seat"]:
-    car.add_component(create_component(comp_type))
-
-car.check_all_components()
+for fruit in fruits:
+    print(fruit.describe())
+    if isinstance(fruit, Apple):
+        print(fruit.crunch())
+    if isinstance(fruit, Orange) or isinstance(fruit, Banana):
+        print(fruit.peel())
