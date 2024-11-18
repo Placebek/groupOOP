@@ -1,58 +1,47 @@
+#3 Nuska
+class Singleton:
+    _instacne = None
+    def __new__(cls, *args, **kwargs):
+        if cls._instacne is None:
+            cls._instacne = super().__new__(cls)
+        return cls._instacne
 
-class Appliance:
+s1 = Singleton()
+s2 = Singleton()
+print(s1 == s2)
+
+
+
+class Player:
+    def __init__(self, name):
+        self.name = name
+
+
+class Team:
+    def __init__(self):
+        self.list = []
+        self.age = []
+        
+    def adder(self, name, age):
+        self.list.append(name)
+        self.age.append(age)
     
-    def __init__(self,brand, power):
-        self.__brand = brand
-        self.__power = power
-	
-    def get_brand(self):
-        return self.__brand
-        
-    def get_power(self):
-        return self.__power
-	
-    def set_brand(self, brand):
-        self.__brand = brand
-    def set_power(self, power):
-        self.__power = power
-
-class WashingMachine(Appliance):
-	    
-    def wash(self):
-        print("Styralnya mashina styraet")
-    def operate(self):
-        print("BRRRR")
-	
-class Refrigerator(Appliance):
-	
-    def cool(self):
-        print("Holodilnik ohlozhdaet")
-	
-    #@overriding
-    def operate(self):
-        print("Bzzzz")
-        
-        
-class Microwave(Appliance):
-    def heat(self):
-        print("Microvolnovka")
+    def deleter(self, name, age):
+        self.list.pop(name)
+        self.listage.pop(age)
     
-    def operate(self):
-        print("WWWWWW")
-		
-ap = Appliance(5,10)
+    def calc(self):
+        sum = 0
+        a = len(self.age)
+        for i in range(a):
+            sum = sum + self.age[i]
+        return sum / a
 
-print(ap.get_brand())
-print(ap.get_power())
+p1 = Player("Nurkeldi")
+p2 = Player("Nur")        
 
-WM = WashingMachine(5,10)
-WM.wash()
-WM.operate()
+team = Team()
+team.adder(p1,18)
+team.adder(p2,19)
 
-RG = Refrigerator(5,10)
-RG.cool()
-RG.operate()
-
-MC = Microwave(5,10)
-MC.heat()
-MC.operate()
+print(team.calc())
