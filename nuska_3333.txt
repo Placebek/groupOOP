@@ -1,0 +1,52 @@
+class Student:
+    def __init__(sef, name, grades):
+        self.__name = name
+        self.__grades = grades
+
+    def add_grade(grade):
+        self.__grades.append(grade)
+
+    def get_average_grade(self):
+        print(medium(grade))
+ 
+    def get_name(self):
+        return self.__name
+
+
+class Shape():
+    def get_area(self):
+        return 0
+
+    def rectangle(self, width, height):
+        self.__width = width
+        self._height = height
+
+    def circle(self, radius):
+        self.__radius = radius
+        return 3.14 * (self.__radius)
+        
+class Instrument():
+    def play(self, piano):
+        print("Piano is playing a melody.")
+
+    def play(self, Guitar):
+        print("Guitar is strumming chords.")
+
+    def play(self, Drum):
+        print("Drum is beating a rhythm.")
+
+student = Student()
+print("")
+
+shape = Shape()
+print("")   
+
+instrument = Instrument()
+instrument.play("piano")
+instrument.play("guitar")
+instrument.play("drum")
+instrument.play("violin")
+
+    
+
+        
