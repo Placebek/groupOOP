@@ -1,1 +1,1 @@
-# groupOOP
+# groupOOP 2 нұсқа
