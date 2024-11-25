@@ -1,0 +1,19 @@
+class ManageTask:
+    def __init__(self):
+        __tasks = []
+
+    def createTask(self, nameTask, deadlineTask, targetTask):
+        self.newTask = [nameTask, deadlineTask, targetTask]
+        print('Создана заявка')
+    def saveTask(self):
+        fond = self.newTask
+        if fond:
+            self.__tasks.append(self.newTask)
+            print('Задача сохранено')   
+        else: 
+            print("Пустая задача, создайте задачу перед сохранением")
+
+    def seeAllTasks(self):
+        return self.__tasks
+
+
