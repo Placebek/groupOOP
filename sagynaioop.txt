@@ -1,54 +1,34 @@
 from abc import ABC, abstractmethod
 
-class CityFactory(ABC):
+class Dostavka:
+    def __init__(self, post_id, stuff: str):
+        self.post_id = post_id
+        self.stuff = stuff
+
+class DeliveryStrategy(ABC):
     @abstractmethod
-    def create_city(self):
+    def deliver(self, post: str):
         pass
 
-class RoadFactory(CityFactory):
-    def create_city(self):
-        return Road()
+class CarDelivery(DeliveryStrategy):
+    def deliver(self, post: str):
+        print(f"CarDelivery posted: {post}")
 
-class BuildingFactory(CityFactory):
-    def create_city(self):
-        return Building()
+class DronDelivery(DeliveryStrategy):
+    def deliver(self, post: str):
+        print(f"DronDelivery posted:{post}")
 
-class ParkFactory(CityFactory):
-    def create_city(self):
-        return Park()
+class DeliveryService:
+    def __init__(self, poster.DeliveryStrategy)
+        self.poster = poster
+    def posts(self, post: str)
+        self.posts.deliver(post)
 
-class Road:
-    def rabotaet(self):
-        print("Дорога открыты")
+dostavka = Dostavka(post_id = 123, stuff = "Car Toy")
 
-class Building:
-    def rabotaet(self):
-        print("Зданий построены")
+car_delivery = DeliveryService(CarDelivery())
+car_poster.posts(f"Mashina dostavka{dostavka.dostavka_id} jetkizildi. zat: (dostavka.stuff)")
+dron_delivery = DeliveryService(DronDelivery())
+dron_poster.posts(f"Dron dostavka{dostavka.dostavka_id} jetkizildi. zat: (dostavka.stuff)")
 
-class Park:
-    def rabotaet(self):
-        print("Парки работают")
 
-class City:
-    def __init__(self):
-        self.road = Road()
-        self.building = Building()
-        self.park = Park()
-
-    def est(self):
-        self.road.otkryty()
-        self.building.salyndy()
-        self.park.rabotaet()
-
-        print("Город существует")
-
-def city_rabotaet(factory: CityFactory):
-    obj = factory.create_city()
-    print("{city.est()}")
-
-road_factory = RoadFactory()
-building_factory = BuildingFactory()
-park_factory = ParkFactory()
-city_rabotaet(road_factory)
-city_rabotaet(building_factory)
-city_rabotaet(park_factory)
