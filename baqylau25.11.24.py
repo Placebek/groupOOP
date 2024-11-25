@@ -4,18 +4,18 @@
 
 class Switchable:
     def turn_on(self):
-        print("Light is on")
+        return "Light is on"
 
-    def turn_of(self):
-        print("Light is off")
+    def turn_off(self):
+        return "Light is off"
 
 class DrightnessAdjustable:
     def control_light(self, level):
-        print(f"Light is {level}")
+        return f"Light is {level}"
 
 class TemperatureControllable:
     def control_temperature(self, level):
-        print(f"Temperature is at home {level}")
+        return f"Temperature is at home {level}"
 
 # Фасад
 
@@ -29,8 +29,8 @@ class ControlHome:
         action = [
             self.switch.turn_on(), 
             self.switch.turn_off(), 
-            self.light.control_light(), 
-            self.temperature.control_temperature()
+            self.light.control_light(50), 
+            self.temperature.control_temperature(20)
         ]
         return "\n".join(action)
             
