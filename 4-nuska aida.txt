@@ -1,0 +1,90 @@
+class ISP(Home):
+ @abstractmethod
+def save(switchable,brightness adjustable,temperaturecontrollable)
+    pass
+
+class ISP(home): 
+  def save(switchable,brightnessadjustable);
+    print(f"Saving {ISP} to Home")
+  
+class ISP(Home):
+  def save(switchable,temperatureControllable):
+     print(f" Saving {IPS} to home")
+
+  class class DataManager:
+   
+   def _init_(self, db: Database):
+       
+     self.db = db
+
+
+def IPS_(self, home):
+      
+    self.db.save(data)
+ 
+ 2.class TV:
+   
+ def on(self):
+      
+  print("Turning on the TV.")
+
+    
+def off(self):
+       
+ print("Turning off the TV.")
+    
+ 
+   def set_channel(self, channel):
+    
+    print(f"Setting TV channel to {channel}.")
+
+
+class DVDPlayer:
+    
+def on(self):
+       
+ print("Turning on the DVD player.")
+    
+ 
+   def off(self):
+       
+ print("Turning off the DVD player.")
+    
+
+   def play(self, movie):
+       
+ print(f"Playing movie: {movie}")
+    
+   
+ def stop(self):
+       
+ print("Stopping DVD player.")
+
+
+class AudioSystem:
+   
+def on(self):
+        
+print("Turning on the audio system.")
+    
+
+   def off(self):
+       
+ print("Turning off the audio system.")
+    
+
+    def set_volume(self, volume):
+    
+    print(f"Setting audio system volume to {volume}.")
+
+
+class Lights:
+    
+def dim(self):
+       
+ print("Dimming the lights.")
+    
+ 
+   def brighten(self):
+      
+  print("Brightening the lights.")
