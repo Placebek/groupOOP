@@ -4,6 +4,7 @@ class ZooAnimal:
 		self.__weigth = weigth
 		self.roar = roar
 
+
 	def get_species(self):
 		return self.__species
 
