@@ -1,0 +1,38 @@
+from abc import ABC, abstractmethod
+
+class NotificationService(ABC):
+    @abstractmethod
+    def send_notification(self) -> str:
+        pass
+
+class SmsNotification(NotificationService):
+    def send_notification(self) -> str:
+        return "Notification sent via SMS"
+
+class EmailNotification(NotificationService):
+    def send_notification(self) -> str:
+        return "Notification sent via Email"
+
+class PushNotification(NotificationService):
+    def send_notification(self) -> str:
+        return "Notification sent via Push"
+
+class NotificationManager:
+    def __init__(self, service: NotificationService):
+        self._service = service
+    
+    def send(self) -> str:
+        return self._service.send_notification()
+
+#Мысал
+sms_service = SmsNotification()
+manager = NotificationManager(sms_service)
+print(manager.send()) 
+
+email_service = EmailNotification()
+manager = NotificationManager(email_service)
+print(manager.send())  
+
+push_service = PushNotification()
+manager = NotificationManager(push_service)
+print(manager.send())
